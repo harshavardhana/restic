@@ -16,7 +16,7 @@ const connLimit = 10
 
 // s3 is a backend which stores the data on an S3 endpoint.
 type s3 struct {
-	client     minio.CloudStorageClient
+	client     *minio.Client
 	connChan   chan struct{}
 	bucketname string
 	prefix     string
